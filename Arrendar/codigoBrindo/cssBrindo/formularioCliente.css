@@ -1,0 +1,23 @@
+.login-card {
+    width: 450px;
+    text-align: center;
+}
+
+#submit {
+    display: inline-block; text-align: center;margin-top: 0.5%;border-color: #ff7433; background-color: #ff7433
+}
+
+#registratelink{
+
+    display: inline-block;
+    margin-top:0.5%;
+    border-color: #ff7433;
+    background-color: #ff7433
+}
+#olvidastelink{
+    display: block; margin-top: 0.5%;
+}
+
+.well-lg {
+    text-align: center;
+}

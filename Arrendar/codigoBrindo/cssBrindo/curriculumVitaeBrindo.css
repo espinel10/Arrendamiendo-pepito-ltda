@@ -1,0 +1,38 @@
+.login-card {
+    width: 450px;
+    text-align: center;
+}
+
+#submit {
+    display: inline-block; text-align: center;margin-top: 0.5%;border-color: #ff7433; background-color: #ff7433
+}
+
+#registratelink{
+
+    display: inline-block;
+    margin-top:0.5%;
+    border-color: #ff7433;
+    background-color: #ff7433
+}
+#olvidastelink{
+    display: block; margin-top: 0.5%;
+}
+
+.cv-form {
+    width: 400px; 
+    text-align: center; 
+    margin-left: 35%;
+    margin-top: 10%;
+}
+
+.btn-success { 
+    margin-top: 23px;
+    color: #fff;
+    background-color: #ff7433;
+    border-color: #ff7433;
+
+}
+
+.titulo{
+    text-align: center;
+}

@@ -1,0 +1,57 @@
+.accordion {
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 1%;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    transition: 0.4s;
+}
+
+.active {
+    color: #444;
+
+}
+
+.accordion:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #000;
+    font-weight: bold;
+    float: right;
+    margin-left: 1%;
+}
+
+.panel {
+    padding: 0 1%;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+iframe {
+   border:0;
+   height: 204px;
+}
+
+footer {
+    width: 100%;
+    margin-top: 2em;
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #000000;
+    border-top: .05rem solid #e5e5e5;
+}
+
+#modalContainer.container{
+    text-align: center;
+}
