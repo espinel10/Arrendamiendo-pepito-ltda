@@ -37,6 +37,10 @@ arrendar contiene el proyecto:
 --scripts(usuarios,databases,admin,utils)
 --views(usuarios,admin)
 -index
+ademas cuenta con responsive design 
+y de los puntos extras hice
+5.Uso de un panel de  administracion admin especializado y personalizado para el sitio
+6.Notificaciones por E-mail
 
 
 
