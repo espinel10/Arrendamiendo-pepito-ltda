@@ -57,7 +57,44 @@ if (!$resultado) {
 }
 
 
+$queryDropOrdersProducts =  'DROP TABLE IF EXISTS inmuebles;';
+$resultado = mysqli_query($enlace, $queryDropOrdersProducts);
+
+if (!$resultado) {
+    die('Error borrando las orders_products');
+}
+
 //SE CREA LA BASE DE DATOS, HAY QUE EJECUTARLO UNA VEZ
+
+$resultado = mysqli_query($enlace, 'CREATE TABLE IF NOT EXISTS usuario(
+    id_usuario INT(3) NOT NULL AUTO_INCREMENT,
+    nombre varchar(155),
+    email CHARACTER varying(40) NOT NULL,
+    password CHARACTER varying(255) NOT NULL,
+    CONSTRAINT id_usuario_pk PRIMARY KEY (id_usuario)
+  );');
+if (!$resultado) {
+    die('Error, creando categorías');
+}
+
+
+$resultado = mysqli_query($enlace, 'CREATE TABLE IF NOT EXISTS inmuebles(
+    id_inmuebles INT(3) NOT NULL AUTO_INCREMENT,
+    nombre varchar(155),
+    descripcion text,
+    precio float,
+    direccion varchar(200),
+    estado varchar(2),
+    ciudad varchar(100),
+    zip varchar(5),
+    country varchar(2),
+    photo CHARACTER varying(200) ,
+    CONSTRAINT id_inmuebles_pk PRIMARY KEY (id_inmuebles)
+  );');
+if (!$resultado) {
+    die('Error, creando inmuebles');
+}
+
 
 $resultado = mysqli_query($enlace, 'CREATE TABLE IF NOT EXISTS categories(
     id_category INT(3) NOT NULL AUTO_INCREMENT,
@@ -83,6 +120,8 @@ $resultado = mysqli_query($enlace, 'CREATE TABLE IF NOT EXISTS clients(
     address CHARACTER varying(255),
     CONSTRAINT id_clients_pk PRIMARY KEY (id_client)
   );');
+
+
 
 if (!$resultado) {
     die('Error, creando clientes');
@@ -113,6 +152,10 @@ $resultado = mysqli_query($enlace, 'CREATE TABLE IF NOT EXISTS products(
     votters DOUBLE UNSIGNED,
     photo CHARACTER varying(200) NOT NULL,
     id_category INT(11),
+    addres varchar(200),
+    city varchar(100),
+    zip varchar(5),
+    country varchar(2),
     CONSTRAINT id_products_pk PRIMARY KEY (id_product),
     CONSTRAINT id_categories_products_fk
     FOREIGN  KEY (id_category) REFERENCES categories(id_category)
@@ -121,7 +164,7 @@ if (!$resultado) {
     die('Error, creando productos');
 }
 
-///////alejandro modifico esto
+
 
 $resultado = mysqli_query($enlace, 'CREATE TABLE IF NOT EXISTS encuesta(
   id_encuesta INT(11) NOT NULL AUTO_INCREMENT,
@@ -172,13 +215,28 @@ if (!$resultado) {
 // INSERTAR VALORES DE PRUEBA 
 
 
+////insertar inmuebles
+$queryInmuebles =  'INSERT INTO inmuebles
+(nombre, descripcion,precio,direccion,estado,ciudad,zip,country,photo) VALUES
+("colinas de pirineos","una casa espectacular",122.2,"fontaine blue","LA","merida","61008", "AE", "https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg"),
+("colinas de pirineos","una casa espectacular",122.2,"fontaine blue","LA","merida","61008", "AE", "https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg"),
+("colinas de pirineos","una casa espectacular",122.2,"fontaine blue","LA","merida","61008", "AE", "https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg"),
+("colinas de pirineos","una casa espectacular",122.2,"fontaine blue","LA","merida","61008", "AE", "https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg");';
+$resultado = mysqli_query($enlace, $queryInmuebles);
+
+if (!$resultado) {
+    die('Error, insertando categorias, ANTES DEBES CREAR LAS TABLAS, create_table.php o los valores ya existen');
+
+}
+
+
 //INSERTA LAS CATEGORÍAS
 $queryCategories =  'INSERT INTO categories 
 (id_category, category, description, photo) VALUES
-(1, "Hamburguesas", "Las mejores hamburguesas de Bucaramanga", "https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg"), 
-(2, "Bebidas", "Productos postobon y jugos naturales", "https://i.ytimg.com/vi/pTdlujTWpB4/maxresdefault.jpg"), 
-(3, "Acompañantes", NULL, "https://img-global.cpcdn.com/recipes/c722ba336c392024/400x400cq70/photo.jpg"),
-(4, "Carnes y más", NULL, "https://i.ytimg.com/vi/O3Xv3Mnk1Nk/hqdefault.jpg");';
+(1, "Casas chicas", NULL, "https://recipes-secure-graphics.grocerywebsite.com/0_GraphicsRecipes/4589_4k.jpg"), 
+(2, "Manciones", NULL, "https://i.ytimg.com/vi/pTdlujTWpB4/maxresdefault.jpg"), 
+(3, "Edificios", NULL, "https://img-global.cpcdn.com/recipes/c722ba336c392024/400x400cq70/photo.jpg"),
+(4, "Locales", NULL, "https://i.ytimg.com/vi/O3Xv3Mnk1Nk/hqdefault.jpg");';
 $resultado = mysqli_query($enlace, $queryCategories);
 
 if (!$resultado) {
@@ -188,16 +246,20 @@ if (!$resultado) {
 
 
 //INSERTA LOS CLIENTES
+
 $queryClients =  'INSERT INTO clients 
 (id_client, first_name, last_name, CC, email, password, phone, age, photo) 
 VALUES
-(10, "Felipe", "Cabeza", "1234567890", "felipecabezas98@gmail.com", "hola1234", "3204408369", 22, "https://avatars1.githubusercontent.com/u/39039427?s=400&u=2f8287f42df63ddfe276ef7628dc6cf8665ed759&v=4"), 
+(10, "alexandro", "Cabeza", "1234567890", "alejandro.espinel2017@gmail.com", "hola1234", "3204408369", 22, "https://avatars1.githubusercontent.com/u/39039427?s=400&u=2f8287f42df63ddfe276ef7628dc6cf8665ed759&v=4"), 
 (20, "Laura", "Mantilla", "987654321", "lauramantilla@gmail.com", "hola1234", "3167053118", 21, "https://laverdadnoticias.com/__export/1588106073332/sites/laverdad/img/2020/04/28/mia_khalifa_preocupa_a_sus_fans.jpg_1902800913.jpg");';
 $resultado = mysqli_query($enlace, $queryClients);
 
 if (!$resultado) {
     die('Error, insertando clientes');
 }
+
+
+
 
 
 //INSERTA LOS EMPLEADOS
@@ -214,16 +276,16 @@ if (!$resultado) {
 
 //INSERTA LOS PRODUCTOS
 $queryProducts =  'INSERT INTO products 
-(id_product, name, description, price, score, votters, photo, id_category) 
+(id_product, name, description, price, score, votters, photo, id_category,addres,city,zip,country) 
 VALUES
-(1000, "Hamburguesa doble carne", "300g de carne, deliciosa hamburguesa con tomate, jamón, queso y cebolla", 20000, 4.2, 2, "https://www.west24horas.com/wp-content/uploads/2019/12/doble-carne.png", 1),
-(2000, "Rock Burguer", "350g de carne, deliciosa hamburguesa con tomate, huevo frito jamón, queso y cebolla para repetir", 22000, 4.5, 6, "https://media-cdn.tripadvisor.com/media/photo-s/07/1d/ee/ce/rock-burger-milano.jpg", 1),
-(3000, "Limonada hierbabuena", "Deliciosa limonada natural para mantenerte saludable", 7000, 4.1, 1, "https://img-global.cpcdn.com/recipes/9533711ac3f3d8c3/751x532cq70/limonada-de-hierbabuena-con-notas-de-jengibre-foto-principal.jpg", 2),
-(4000, "Gaseosa Hipinto 350ml", "Gaseosa hipinto de 250ml o 350ml sabores kola y piña", 4000, 3.8, 4, "https://tomatelavida.com.co/wp-content/uploads/2018/06/pin%CC%83a-f_Mesa-de-trabajo-1-copia.jpg", 2),
-(5000, "Papas locas", "Deliciosas papas locas para acompañar tus platos", 12000, 4.3, 5, "https://img-global.cpcdn.com/recipes/c722ba336c392024/400x400cq70/photo.jpg", 3),
-(6000, "Papas a la francesa", "Deliciosas papas a la francesa para acompañar tus platos", 7000, 4.1, 10, "https://i.ytimg.com/vi/qpA5tTDtuG4/maxresdefault.jpg", 3),
-(7000, "Carne a la plancha", "400 g de carne a la plancha a tu medida", 24000, 4.4, 6, "https://www.carniceriapedrorivas.com/img/cms/2960016764_9a13d8b1b3_b.jpg", 4),
-(8000, "Pechuga gratinada", "200 g de pechuga gratinada acompañada de arepa, ensalada y papa criolla", 20000, 4.8, 13, "https://dondemanuel.co/wp-content/uploads/2018/01/pechuga-gratinada.jpg", 4);';
+(1000, "Gleivan", "Casa al orilla del mar", 20000, 4.2, 2, "https://i.ytimg.com/vi/p1n_OxKILt4/maxresdefault.jpg", 1,"la cueva","choroni","654","ba"),
+(2000, "villa contry", "manhattan", 22000, 4.5, 6, "https://thumbs.dreamstime.com/z/front-door-de-una-casa-de-ciudad-georgiana-hermosa-de-manhattan-del-ingl%C3%A9s-de-la-era-entrada-de-la-construcci%C3%B3n-de-new-york-city-74035794.jpg", 1,"la cueva","choroni","654","ba"),
+(3000, "Fotain blue", "santorini house", 7000, 4.1, 1, "https://static2.mansionglobal.com/production/media/article-images/b094a311fb9a7f66235d42bf65bb5e31/medium_01-4110-Paces-Ferry-Rd-120.jpg", 2,"la cueva","choroni","654","ba"),
+(4000, "betania", "casa en malibu", 4000, 3.8, 4, "https://therealdeal.com/tristate/wp-content/uploads/2020/03/Greenwich-mansion-with-%E2%80%98loads-of-privacy%E2%80%99-seeks-9.995M.jpg", 2,"la cueva","choroni","654","ba"),
+(5000, "centro de negocios", "santiago de cali", 12000, 4.3, 5, "https://static2.abc.es/Media/201310/15/centro-negocios--644x362.jpg", 3,"la cueva","choroni","654","ba"),
+(6000, "centro de convenciones", "centro para reuninos masivas", 7000, 4.1, 10, "https://www.ateneadigital.es/wp-content/uploads/2018/12/centro-negocios-695x445.jpg", 3,"la cueva","choroni","654","ba"),
+(7000, "local peque", "centro comercial la florida", 24000, 4.4, 6, "https://i.pinimg.com/originals/98/33/eb/9833ebf2b5a5ccda8af825b7ef95affb.png", 4,"la cueva","choroni","654","ba"),
+(8000, "comida", "local de comida rapida", 20000, 4.8, 13, "https://www.bienesonline.com/venezuela/photos/negocio-en-feria-de-comida-cc-millenium-merida-venezuela-LOV1158941559677219-338.jpg", 4,"la cueva","choroni","654","ba");';
 $resultado = mysqli_query($enlace, $queryProducts);
 
 if (!$resultado) {

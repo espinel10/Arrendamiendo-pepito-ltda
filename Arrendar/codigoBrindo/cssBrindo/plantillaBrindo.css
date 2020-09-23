@@ -7,7 +7,7 @@
 }
 
 .brindo-navbar {
-    background-color: #ff7433;
+    background-color: #2ca0ff;
 }
 
 .navbar-brand {
@@ -35,7 +35,7 @@
 }
 
 .brindo-title {
-    color: #ff7433;
+    color: #2ca0ff;
     font-family: Anton;
     font-size: 2.5em;
 }
@@ -140,7 +140,7 @@ footer {
 }
 
 #buttonModalClient {
-    margin-top: 1em; border-color: #ff7433; background-color: #ff7433
+    margin-top: 1em; border-color: #2ca0ff; background-color: #2ca0ff
 }
 
 .iframeModal {

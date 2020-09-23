@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="../../cssBrindo/formularioCliente.css">
 
-    <link rel="icon" href="../../../datosBrindo/iconosBrindo/iconoBrindo.png">
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/723/723164.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Para los íconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="../../cssBrindo/plantillaBrindo.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Brindo, la página para hacer los pedidos en tu restaurante" />
+    <meta name="Description" content="Pepito tu pagina para conocer inmuebles alrededor del mundo" />
     <meta name="distribution" content="global" />
-    <meta name="Keywords" content="Brindo,Pedidos,Restaurante,Domicilios" />
+    <meta name="Keywords" content="pepito,arrandemiento,mundo,inmuebles,clientes,admin" />
     <meta name="Robots" content="all" />
-    <meta name="author" content="Andrés Felipe Cabeza, Geyner Rojas" />
-    <meta name="copyright" content="Andrés Felipe Cabeza" />
+    <meta name="author" content="Espinel Alejandro José" />
+    <meta name="copyright" content="Espinel Alejandro José" />
     <title>Brindo</title>
 
 </head>
@@ -41,8 +41,8 @@ if (isset($error))
     <!-- MENÙ-->
     <div class="wrapper">
         <nav class="navbar navbar-expand-md navbar navbar-dark brindo-navbar">
-            <a href="../../../" class="navbar-left "><img class="logo" src="../../../datosBrindo/iconosBrindo/iconoAltBrindo.png"></a>
-            <a class="navbar-brand" href="../../../">Brindo</a>
+            <a href="../../../" class="navbar-left "><img class="logo" src="https://image.flaticon.com/icons/png/512/723/723164.png"></a>
+            <a class="navbar-brand" href="../../../">Pepito</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,11 +52,9 @@ if (isset($error))
                         <a class="nav-link" href="../../../index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../viewsBrindo/curriculumVitaeBrindo.html">Desarrolladores del sitio</a>
+                        <a class="nav-link" href="#">Desarrollador del sitio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../viewsBrindo/quizBrindo.html">Encuesta</a>
-                    </li>
+                 
                     <li class="nav-item">
                         <a class="nav-link" href="../../viewsBrindo/fquestions.html">Preguntas Frecuentes</a>
                     </li>
@@ -70,7 +68,7 @@ if (isset($error))
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../employees/employeeLoginBrindo.php">Empleado</a>
+                        <a class="nav-link" href="../employees/employeeLoginBrindo.php">Admin</a>
                     </li>
                 </ul>
                 </ul>
@@ -78,7 +76,7 @@ if (isset($error))
         </nav>
     </div>
     <div class="login-employee">
-        <h2>Inicia Sesión (empleado)</h2>
+        <h2>Inicia Sesión (Admin)</h2>
         <form action="../../scripts/employees/check_login_employee.php" method="post">
             <input type="text" class="form-control" id="user" name="username" placeholder="Usuario">
             <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
@@ -96,8 +94,8 @@ if (isset($error))
                     <i class="fa fa-clock-o fa-3x card-img-top why-us-header-icon d-none d-sm-none d-md-block d-lg-block" aria-hidden="true"></i>
                     <i class="fa fa-clock-o fa-2x card-img-top why-us-header-icon .d-block .d-sm-none d-md-none" aria-hidden="true"></i>
                     <div class="card-body">
-                        <h3 class="card-title d-none d-sm-none d-md-block d-lg-block">Servicio r&aacute;pido</h3>
-                        <p class="card-text d-none d-sm-none d-md-none d-lg-block">Con nuestros pedidos automatizados, vamos a entregar tus pedidos en tiempo r&eacute;cord </p>
+                        <h3 class="card-title d-none d-sm-none d-md-block d-lg-block">Servicio r&aacute;pido </h3>
+                        <p class="card-text d-none d-sm-none d-md-none d-lg-block"> Con nuestro servicio al cliente automatizado,vamos a darte el inmueble inmediatamente</p>
                         <!-- Sólo para dispositivos pequeños -->
                         <h6 class="d-block d-sm-none small-devices-description">Rápidez</h6>
 
@@ -110,11 +108,11 @@ if (isset($error))
             <div class="col-4">
                 <div class="card">
                     <!-- Muestra el ícono x5 solo en dispositivos grandes, sino en x3 -->
-                    <i class="fa fa-cutlery fa-3x card-img-top why-us-header-icon d-none d-sm-none d-md-block d-lg-block" aria-hidden="true"></i>
-                    <i class="fa fa-cutlery fa-2x card-img-top why-us-header-icon .d-block .d-sm-none d-md-none" aria-hidden="true"></i>
+                    <i class="fa fa-check-circle-o fa-3x card-img-top why-us-header-icon d-none d-sm-none d-md-block d-lg-block" aria-hidden="true"></i>
+                    <i class="fa fa-check-circle-o fa-2x card-img-top why-us-header-icon .d-block .d-sm-none d-md-none" aria-hidden="true"></i>
                     <div class="card-body">
-                        <h3 class="card-title d-none d-sm-none d-md-block d-lg-block ">Variedad de productos</h3>
-                        <p class="card-text d-none d-sm-none d-md-none d-lg-block">Hamburguesas, perros calientes, acompañantes, bebidas, carnes y mucho m&aacute;s </p>
+                        <h3 class="card-title d-none d-sm-none d-md-block d-lg-block ">Diversidad de inmuebles</h3>
+                        <p class="card-text d-none d-sm-none d-md-none d-lg-block">Con vista al mar,en la ciudad,cerca de donde estudias o trabajas tu decides</p>
                         <!-- Sólo para dispositivos pequeños -->
                         <h6 class="d-block d-sm-none small-devices-description">Variedad</h6>
                     </div>
@@ -145,21 +143,7 @@ if (isset($error))
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-sm">
-                    Cabeza Serrano Andres Felipe
-                    <a href="https:www.github.com/felipecabeza16" class="nav-link" target="_blank"><i
-                                    class="fa fa-github fa-lg"></i></a>
-                </div>
-                <div class="col-sm">
-                    Rojas Torres Geyner Felipe
-                    <a href="https:www.instagram.com/geynerrt" class="nav-link" target="_blank"><i
-                                    class="fa fa-instagram fa-lg"></i></a>
-                </div>
-                <div class="col-sm">
-                    Jaimes Teheran Jorge Alfredo
-                    <a href="https:www.github.com/jhosgun" class="nav-link" target="_blank"><i
-                                    class="fa fa-github fa-lg"></i></a>
-                </div>
+              
                 <div class="col-sm">
                     Espinel Alejandro José
                     <a href="https:www.github.com/espinel10" class="nav-link" target="_blank"><i

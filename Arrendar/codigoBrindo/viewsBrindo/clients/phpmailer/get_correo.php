@@ -39,7 +39,7 @@ $mail->SMTPSecure = 'ssl';
 $mail->SMTPAuth=true;
 $mail->Username="restaurantebrindo@gmail.com";
 $mail->Password="asdfbasjfbasdjkfnlk.65415615";
-$mail->setFrom('restaurantebrindo@gmail.com','El Restaurante Brindo el mejor de Bucaramanchester');
+$mail->setFrom('restaurantebrindo@gmail.com','Pepito Ltda tu mejor opcion para arrendar alrededor del mundo');
 $mail->addAddress($username,'Usuario de brindo');
 $mail->Subject='RESTABLECIMIENTO DE CLAVE';
 $mail->Body="DEBIDO A LOS INCONVENIENTES LE INFORMAMOS QUE LA CLAVE NUEVA ES :  ".$new_password;

@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="../../cssBrindo/clientMenu.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Brindo, la página para hacer los pedidos en tu restaurante" />
+    <meta name="Description" content="Pepito tu pagina para conocer inmuebles alrededor del mundo" />
     <meta name="distribution" content="global" />
-    <meta name="Keywords" content="Brindo,Pedidos,Restaurante,Domicilios" />
+    <meta name="Keywords" content="pepito,arrandemiento,mundo,inmuebles,clientes,admin" />
     <meta name="Robots" content="all" />
-    <meta name="author" content="Andrés Felipe Cabeza, Geyner Rojas" />
-    <meta name="copyright" content="Andrés Felipe Cabeza" />
+    <meta name="author" content="Espinel Alejandro José" />
+    <meta name="copyright" content="Espinel Alejandro José" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -212,7 +212,7 @@
         <!-- MENÙ-->
         <div class="wrapper">
             <nav class="navbar navbar-expand-md navbar navbar-dark brindo-navbar">
-                <a href="#" class="navbar-left "><img class="logo" src="../../../datosBrindo/iconosBrindo/iconoAltBrindo.png"></a>
+                <a href="#" class="navbar-left "><img class="logo" src="https://image.flaticon.com/icons/png/512/723/723164.png"></a>
                 <a class="navbar-brand" href="#">Brindo</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -336,21 +336,7 @@ $sql_stmt_categoria = "SELECT * FROM categories";
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-sm">
-                    Cabeza Serrano Andres Felipe
-                    <a href="https://www.github.com/felipecabeza16" class="nav-link" target="_blank"><i
-                            class="fa fa-github fa-lg"></i></a>
-                </div>
-                <div class="col-sm">
-                    Rojas Torres Geyner Felipe
-                    <a href="https://www.instagram.com/geynerrt" class="nav-link" target="_blank"><i
-                            class="fa fa-instagram fa-lg"></i></a>
-                </div>
-                <div class="col-sm">
-                    Jaimes Teheran Jorge Alfredo
-                    <a href="https://www.github.com/jhosgun" class="nav-link" target="_blank"><i
-                            class="fa fa-github fa-lg"></i></a>
-                </div>
+             
                 <div class="col-sm">
                     Espinel Alejandro José
                     <a href="https://www.github.com/espinel10" class="nav-link" target="_blank"><i
