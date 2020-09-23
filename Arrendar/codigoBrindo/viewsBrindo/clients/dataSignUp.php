@@ -1,6 +1,6 @@
 <?php 
 
-$enlace = mysqli_connect("localhost", "20201B103", "8FcDd67_Dg", "20201B103");
+$enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","ottos_26809991_20201B103");
 if (!$enlace) {
     echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
     echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;

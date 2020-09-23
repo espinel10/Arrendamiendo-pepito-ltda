@@ -6,7 +6,7 @@ Pasos
 - [X] Crear los scripts
 - [X] Crear lo login con sus respectiva clave encriptada y sesiones,cookies,recuperacion de clave por correo
 - [X] despliegue de propiedades
-- [] subir al hosting
+- [X] subir al hosting
 - [ ] react en el fronted
 - [X] servicio de correo electronico
 - [ ] multi idioma
