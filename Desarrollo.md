@@ -1,1 +1,5 @@
-# Arrendamiendo-pepito-ltda
+# Lista de Chequeo
+Pasos
+- [ ] Index 
+- [ ] Menus
+- [ ] MariaDB
