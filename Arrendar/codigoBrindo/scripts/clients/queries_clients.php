@@ -5,7 +5,7 @@
 
 function getProductName($productID){
 
-    $enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","20201B103");
+    $enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","ottos_26809991_20201B103");
     
     if (!$enlace) {
         echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -33,7 +33,7 @@ function getProductName($productID){
 
 function didProductExist($productID){
 
-    $enlace = mysqli_connect("localhost", "20201B103", "8FcDd67_Dg", "20201B103");
+    $enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","ottos_26809991_20201B103");
     
     if (!$enlace) {
         echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -61,7 +61,7 @@ function didProductExist($productID){
     }
 
     function getClientById($clientID){
-    $enlace = mysqli_connect("localhost", "20201B103", "8FcDd67_Dg", "20201B103");
+        $enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","ottos_26809991_20201B103");
     
     if (!$enlace) {
         echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -92,7 +92,7 @@ function didProductExist($productID){
 }
 
     function viewOrder($clientID){
-        $enlace = mysqli_connect("localhost", "20201B103", "8FcDd67_Dg", "20201B103");
+        $enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","ottos_26809991_20201B103");
     
         if (!$enlace) {
             echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -142,7 +142,7 @@ function didProductExist($productID){
 
 
 function deleteOrder($orderID){
-    $enlace = mysqli_connect("localhost", "20201B103", "8FcDd67_Dg", "20201B103");
+    $enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","ottos_26809991_20201B103");
 
     if (!$enlace) {
         echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -185,7 +185,7 @@ function deleteOrder($orderID){
 }
 
 function confirmOrder($orderID){
-    $enlace = mysqli_connect("localhost", "20201B103", "8FcDd67_Dg", "20201B103");
+    $enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","ottos_26809991_20201B103");
 
     if (!$enlace) {
         echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
@@ -217,7 +217,7 @@ if (!isset($orderID) || $orderID < 1){
     die('No tienes pedidos actualmente');
 }
 
-$enlace = mysqli_connect("localhost", "20201B103", "8FcDd67_Dg", "20201B103");
+$enlace = mysqli_connect("sql304.tonohost.com", "ottos_26809991", "pele1234","ottos_26809991_20201B103");
     
 if (!$enlace) {
     echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
